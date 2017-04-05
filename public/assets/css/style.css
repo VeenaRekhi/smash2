@@ -1,0 +1,116 @@
+
+
+* {
+	box-sizing: border-box;
+    }
+
+body {
+	   background-image: url('../img/back2.jpeg');
+	   background-color: #777;
+	   background-repeat: no-repeat;
+	   background-size: cover;
+	   font-family: Kumar + one;
+	   font-size: 18px;
+	   line-height: 30px;
+	   opacity: 0.75;
+    }
+
+h1, h2, h3, h4 {
+        font-family: Kumar + one;
+        color: red;
+    }
+
+h1  {
+	    font-size: 35px;
+	    line-height: 50px;
+	    padding-bottom: 20px;
+    }
+
+h2, h3  {
+	    font-size: 28px;
+    }
+
+/* container-fluid starts here*/
+
+#headline  {
+	font-size: 28px;
+	line-height: 35px;
+	padding: 5 5 5 5;
+	margin: 1% auto;
+	color: red; 
+	text-shadow: 8px 8px 12px blue;
+}
+
+#headline:hover  {
+	color: blue;
+	background-color: Red;
+	-webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+.sidenav  {
+	color: solid black;
+    text-decoration: none;
+    text-shadow: 8px 8px 12px red;
+    height: 100%;
+}
+
+.centrenav  {
+	color: solid black;
+    text-decoration: none;
+    text-shadow: 8px 8px 12px red;
+    height: 100%;
+}
+
+.rightnav {
+	color: solid black;
+    text-decoration: none;
+    text-shadow: 8px 8px 12px red;
+    height: 100%;
+
+}
+
+#devour, #make, #finish {
+	width: 40%;
+	display: inline-block;
+	cursor: pointer;
+	font-size: 20px;
+	line-height: 30px;
+	padding: 5 5 0 5;
+	margin: 1% auto;
+	background-color: white; 
+    color: red; 
+    border-radius: 4px;
+    border: 2px solid orange;
+	font-family: 'Georgia', Times, Times new Roman, serif;
+}
+
+#devour:hover, #make:hover, #finish:hover  {
+	color: red;
+	background-color: blue;
+	-webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+
+li {
+  padding: 5px;
+  margin: 5px;
+  background: #404040;
+  color: white;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+  padding: 5px;
+  margin: 5px;
+  background: #404040;
+}
+
+.form-group {
+  margin-bottom: 5px;
+  color: blue;
+}

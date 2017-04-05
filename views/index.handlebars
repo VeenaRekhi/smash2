@@ -1,0 +1,76 @@
+
+
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-4 sidenav text-centre">
+                
+            <h1 id="headline" class="headline text-center"><strong> SMASH ME !! </strong></h1><br><br>
+            
+            <ul>
+              {{#each burgers}}
+                {{#unless this.devoured}}
+                  <li>
+                    {{this.burger_name}}
+
+                    <form action="/{{this.id}}?_method=PUT" method="POST">
+                      <input type="hidden" name="devoured" value="true" required>
+                      <button id="devour" type="submit">Devour It!</button>
+                    </form>
+                  </li>
+                {{/unless}}
+              {{/each}} 
+            </ul>  
+    </div>
+  
+
+    <div class="make col-sm-4 centrenav text-centre">
+                  
+            <h1 id="headline" class="title text-center"><strong> EAT DA BURGER !! </strong></h1><br><br>
+              <img src="/assets/img/classic.png" width="350px" height="350px">
+
+              <br><br><br>
+              <h2 id="headline"><strong>Add a Burger</strong></h2>
+
+            <form class="create-update-form col-sm-12 text-centre" class="action="/" method="POST">
+
+              <div class="form-group">
+                <label for="burger">Burger Name:</label>
+                <input type="text" id="burger" name="burger_name" required>
+              </div>
+
+              <div class="form-group">
+                <input type="hidden" name="devoured" value="0" checked required><br>
+              </div>
+
+              <button id="make" type="submit">Add A Burger</button>
+            </form>
+
+
+      </div>
+
+
+
+    <div class="col-sm-4 rightnav text-centre">
+            <h1 id="headline" class="title text-center"> DEVOURED BURGERS !!</h1>
+
+            <ul>
+              {{#each burgers}}
+                {{#if this.devoured}}
+                  <li>
+                    {{this.burger_name}}
+
+                    <form action="/{{this.id}}?_method=PUT" method="POST">
+                      <input type="hidden" name="devoured" value="false" required>
+                      <button id="finish" type="submit"> Smash Me!!</button>
+                    </form>
+                  </li>
+                {{/if}}
+              {{/each}}
+            
+            </ul>
+
+      </div>
+
+</div>
+</div>
