@@ -1,13 +1,22 @@
 // Dependencies
 // =============================================================
 var express = require("express");
+var db = require("./models");
+
+
 var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
 
-var port = process.env.PORT || 3000;   // setting up port at localhost 3000.
+var PORT = process.env.NODE_ENV || 3000;   // setting up port at localhost 3000.
 
 var app = express();  // setting up variable app with express server functioning
 
+
+db.sequelize.sync().then(function()  {
+	app.listen(PORT, function()  {
+		console.log("Listening on port %s", PORT);
+	});
+});
 //app.set('port', (process.env.PORT || 3000));
 // Serving static content for the app(program) from the "public" directory(client side) 
 //to the Application directory(server side).
