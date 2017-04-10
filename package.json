@@ -1,31 +1,29 @@
 {
-  "name": "mysql-sequelize-heroku",
+  "name": "smash2",
   "version": "1.0.0",
-  "description": "A node server app with sql database and handlebars",
-  "main": "server.js",
+  "description": "burgersmash with npm sequelize",
+  "main": "index.js",
+  "dependencies": {
+    "cli": "^1.0.1",
+    "mysql": "^2.13.0",
+    "sequelize": "^3.30.4"
+  },
+  "devDependencies": {},
   "scripts": {
-    "test": "test"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/VeenaRekhi/BurgerSmash.git"
+    "url": "git+https://github.com/VeenaRekhi/smash2.git"
   },
   "keywords": [
-    "smash",
-    "it"
+    "node",
+    "server.js"
   ],
-  "author": "Veena Rekhi",
-  "license": "MIT",
+  "author": "VeenaRekhi",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/VeenaRekhi/BurgerSmash/issues"
+    "url": "https://github.com/VeenaRekhi/smash2/issues"
   },
-  "homepage": "https://github.com/VeenaRekhi/BurgerSmash#readme",
-  "dependencies": {
-    "body-parser": "^1.17.1",
-    "express": "^4.15.2",
-    "express-handlebars": "^3.0.0",
-    "method-override": "^2.3.7",
-    "mysql": "^2.13.0",
-    "sequelize": "^3.30.4"
-  }
+  "homepage": "https://github.com/VeenaRekhi/smash2#readme"
 }

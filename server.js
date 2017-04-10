@@ -1,22 +1,16 @@
 // Dependencies
 // =============================================================
 var express = require("express");
-var db = require("./models");
-
-
 var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
 
-var PORT = process.env.NODE_ENV || 3000;   // setting up port at localhost 3000.
+var port = process.env.PORT || 3000;   // setting up port at localhost 3000.
 
 var app = express();  // setting up variable app with express server functioning
 
+// Requiring our models for syncing
+var db = require("./models");
 
-db.sequelize.sync().then(function()  {
-	app.listen(PORT, function()  {
-		console.log("Listening on port %s", PORT);
-	});
-});
 //app.set('port', (process.env.PORT || 3000));
 // Serving static content for the app(program) from the "public" directory(client side) 
 //to the Application directory(server side).
@@ -41,7 +35,14 @@ var routes = require ("./controllers/burgers_controller.js");
 
 app.use("/", routes);  // app listening on routes to the burger_controller.js
 
-app.listen(port);
+//app.listen(port);
+
+// Syncing our sequelize models and then starting our express app
+db.sequelize.sync().then(function() {
+  app.listen(port, function() {
+    console.log("App listening on PORT " + port);
+  });
+});
 
 
 
